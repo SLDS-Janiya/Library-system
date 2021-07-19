@@ -18,9 +18,9 @@ namespace library_Managmet_System
             InitializeComponent();
         }
 
-        SqlDataAdapter SqlDa = new SqlDataAdapter();
+        SqlDataAdapter sqlAdapter = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-0F72558;Initial Catalog=Library_Management;Integrated Security=True");
         public static String Rname, Utype;
         String un, pw;
 
@@ -35,16 +35,16 @@ namespace library_Managmet_System
                 un = txtusername.Text;
                 pw = txtpassword.Text;
                 Utype = cmbustype.Text;
-                String selDtl = "SELECT * FROM UserDtl WHERE Username ='" + un +"' AND Password = '" + pw +
+                string queryString = "SELECT * FROM Users WHERE Username ='" + un +"' AND Password = '" + pw +
                 "' AND UserType = '" + Utype + "'";
                 conn.Open();
-                SqlDa = new SqlDataAdapter(selDtl, conn);
-                DataTable DtLog = new DataTable();
-                SqlDa.Fill(DtLog);
+                sqlAdapter = new SqlDataAdapter(queryString, conn);
+                DataTable dtbl = new DataTable();
+                sqlAdapter.Fill(dtbl);
                 conn.Close();
-                if (DtLog.Rows.Count > 0)
+                if (dtbl.Rows.Count > 0)
                 {
-                   String getName = "SELECT UserRealName FROM UserDtl WHERE Username = '" + un + "'";
+                   String getName = "SELECT UserRealName FROM Users WHERE Username = '" + un + "'";
                     conn.Open();
                     cmd = new SqlCommand(getName, conn);
                     SqlDataReader myR = cmd.ExecuteReader();

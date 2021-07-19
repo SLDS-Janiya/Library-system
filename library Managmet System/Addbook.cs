@@ -20,10 +20,10 @@ namespace library_Managmet_System
 
         SqlDataAdapter SqlDa = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-0F72558;Initial Catalog=Library_Management;Integrated Security=True");
 
         //-------------------------------eraseMe--------------------------------------------//
-        private void eraseMe()
+        private void Clear()
         {
             txtbname.Text = "";
             txtauthor.Text = "";
@@ -39,13 +39,13 @@ namespace library_Managmet_System
                 try
                 {
 
-                    String saveque = "INSERT INTO Book_Dtl VALUES('" + txtbname.Text + "','" + txtauthor.Text + "','" + txtpublic.Text + "','" + txtquan.Text + "')";
+                    String saveque = "INSERT INTO Books VALUES('" + txtbname.Text + "','" + txtauthor.Text + "','" + txtpublic.Text + "','" + txtquan.Text + "')";
                     conn.Open();
                     cmd = new SqlCommand(saveque, conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Details of Book " + txtbname.Text + " ,successfully save to the Database!", "SAVED!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    eraseMe();
+                    Clear();
                 }
                 catch (Exception MyError)
                 {
@@ -60,7 +60,7 @@ namespace library_Managmet_System
         //-------------------------------Button clear--------------------------------------------//
         private void btncl_Click(object sender, EventArgs e)
         {
-            eraseMe();
+            Clear();
         }
 
         //-------------------------------Button Exit--------------------------------------------//

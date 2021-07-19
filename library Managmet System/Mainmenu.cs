@@ -18,7 +18,7 @@ namespace library_Managmet_System
         }
 
         //-------------------------------addBook--------------------------------------------//
-        private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
+        private void addBookT_Click(object sender, EventArgs e)
         {
             Addbook frm = new Addbook();
             frm.Show();
@@ -71,7 +71,7 @@ namespace library_Managmet_System
         }
 
         //-------------------------------exitToolStripMenuItem--------------------------------------------//
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Are you sure, You want to Exit?", "Confirm to Exit!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
