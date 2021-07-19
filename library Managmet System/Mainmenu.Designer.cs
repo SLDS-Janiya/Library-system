@@ -53,9 +53,10 @@
             this.lblwelcom.BackColor = System.Drawing.Color.Transparent;
             this.lblwelcom.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblwelcom.ForeColor = System.Drawing.Color.DeepPink;
-            this.lblwelcom.Location = new System.Drawing.Point(12, 396);
+            this.lblwelcom.Location = new System.Drawing.Point(16, 487);
+            this.lblwelcom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblwelcom.Name = "lblwelcom";
-            this.lblwelcom.Size = new System.Drawing.Size(0, 25);
+            this.lblwelcom.Size = new System.Drawing.Size(0, 32);
             this.lblwelcom.TabIndex = 4;
             // 
             // menuStrip1
@@ -63,6 +64,7 @@
             this.menuStrip1.BackColor = System.Drawing.Color.IndianRed;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuStrip1.Font = new System.Drawing.Font("Sitka Small", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bookToolStripMenuItem,
             this.memberToolStripMenuItem,
@@ -73,7 +75,7 @@
             this.sysremToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(901, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1201, 43);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,8 +86,9 @@
             this.addBookT,
             this.viewBookToolStripMenuItem});
             this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
-            this.bookToolStripMenuItem.Size = new System.Drawing.Size(74, 32);
+            this.bookToolStripMenuItem.Size = new System.Drawing.Size(92, 39);
             this.bookToolStripMenuItem.Text = "Book";
+            this.bookToolStripMenuItem.Click += new System.EventHandler(this.bookToolStripMenuItem_Click);
             // 
             // addBookT
             // 
@@ -93,7 +96,7 @@
             this.addBookT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.addBookT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addBookT.Name = "addBookT";
-            this.addBookT.Size = new System.Drawing.Size(189, 32);
+            this.addBookT.Size = new System.Drawing.Size(236, 40);
             this.addBookT.Text = "Add Book";
             // 
             // viewBookToolStripMenuItem
@@ -102,7 +105,7 @@
             this.viewBookToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.viewBookToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.viewBookToolStripMenuItem.Name = "viewBookToolStripMenuItem";
-            this.viewBookToolStripMenuItem.Size = new System.Drawing.Size(189, 32);
+            this.viewBookToolStripMenuItem.Size = new System.Drawing.Size(236, 40);
             this.viewBookToolStripMenuItem.Text = "View Book";
             // 
             // memberToolStripMenuItem
@@ -112,7 +115,7 @@
             this.addMemberT,
             this.viewMemberToolStripMenuItem});
             this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
-            this.memberToolStripMenuItem.Size = new System.Drawing.Size(106, 32);
+            this.memberToolStripMenuItem.Size = new System.Drawing.Size(134, 39);
             this.memberToolStripMenuItem.Text = "Member";
             // 
             // addMemberT
@@ -120,7 +123,7 @@
             this.addMemberT.BackColor = System.Drawing.Color.DarkOrange;
             this.addMemberT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addMemberT.Name = "addMemberT";
-            this.addMemberT.Size = new System.Drawing.Size(221, 32);
+            this.addMemberT.Size = new System.Drawing.Size(278, 40);
             this.addMemberT.Text = "Add Member";
             // 
             // viewMemberToolStripMenuItem
@@ -128,7 +131,7 @@
             this.viewMemberToolStripMenuItem.BackColor = System.Drawing.Color.DarkOrange;
             this.viewMemberToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.viewMemberToolStripMenuItem.Name = "viewMemberToolStripMenuItem";
-            this.viewMemberToolStripMenuItem.Size = new System.Drawing.Size(221, 32);
+            this.viewMemberToolStripMenuItem.Size = new System.Drawing.Size(278, 40);
             this.viewMemberToolStripMenuItem.Text = "View Member";
             // 
             // issueBookToolStripMenuItem
@@ -136,14 +139,15 @@
             this.issueBookToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.issueBookToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.issueBookToolStripMenuItem.Name = "issueBookToolStripMenuItem";
-            this.issueBookToolStripMenuItem.Size = new System.Drawing.Size(132, 32);
+            this.issueBookToolStripMenuItem.Size = new System.Drawing.Size(166, 39);
             this.issueBookToolStripMenuItem.Text = "Issue Book";
+            this.issueBookToolStripMenuItem.Click += new System.EventHandler(this.issueBookToolStripMenuItem_Click_1);
             // 
             // PIMReternbook
             // 
             this.PIMReternbook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PIMReternbook.Name = "PIMReternbook";
-            this.PIMReternbook.Size = new System.Drawing.Size(148, 32);
+            this.PIMReternbook.Size = new System.Drawing.Size(186, 39);
             this.PIMReternbook.Text = "Retern Book";
             // 
             // completBookToolStripMenuItem
@@ -152,7 +156,7 @@
             this.completBookToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.completBookToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.completBookToolStripMenuItem.Name = "completBookToolStripMenuItem";
-            this.completBookToolStripMenuItem.Size = new System.Drawing.Size(170, 32);
+            this.completBookToolStripMenuItem.Size = new System.Drawing.Size(211, 39);
             this.completBookToolStripMenuItem.Text = "Complet Book ";
             // 
             // userToolStripMenuItem
@@ -160,14 +164,14 @@
             this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userRegistrationToolStripMenuItem});
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(70, 32);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(88, 39);
             this.userToolStripMenuItem.Text = "User";
             // 
             // userRegistrationToolStripMenuItem
             // 
             this.userRegistrationToolStripMenuItem.BackColor = System.Drawing.Color.LimeGreen;
             this.userRegistrationToolStripMenuItem.Name = "userRegistrationToolStripMenuItem";
-            this.userRegistrationToolStripMenuItem.Size = new System.Drawing.Size(262, 32);
+            this.userRegistrationToolStripMenuItem.Size = new System.Drawing.Size(330, 40);
             this.userRegistrationToolStripMenuItem.Text = "User Registration";
             // 
             // sysremToolStripMenuItem
@@ -177,14 +181,14 @@
             this.exitToolStripMenuItem});
             this.sysremToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sysremToolStripMenuItem.Name = "sysremToolStripMenuItem";
-            this.sysremToolStripMenuItem.Size = new System.Drawing.Size(97, 32);
+            this.sysremToolStripMenuItem.Size = new System.Drawing.Size(121, 39);
             this.sysremToolStripMenuItem.Text = "System";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.Orange;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(192, 40);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // exitToolStripMenuItem
@@ -192,20 +196,22 @@
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Crimson;
             this.exitToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(192, 40);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // Mainmenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::library_Managmet_System.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(901, 459);
+            this.ClientSize = new System.Drawing.Size(1201, 565);
             this.ControlBox = false;
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblwelcom);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Mainmenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
