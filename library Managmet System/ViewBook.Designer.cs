@@ -58,9 +58,10 @@
             this.btncl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncl.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold);
             this.btncl.ForeColor = System.Drawing.Color.DarkRed;
-            this.btncl.Location = new System.Drawing.Point(771, 66);
+            this.btncl.Location = new System.Drawing.Point(1028, 81);
+            this.btncl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btncl.Name = "btncl";
-            this.btncl.Size = new System.Drawing.Size(110, 35);
+            this.btncl.Size = new System.Drawing.Size(147, 43);
             this.btncl.TabIndex = 1;
             this.btncl.Text = "CLEAR";
             this.btncl.UseVisualStyleBackColor = false;
@@ -72,18 +73,20 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(201, 69);
+            this.label1.Location = new System.Drawing.Point(268, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 28);
+            this.label1.Size = new System.Drawing.Size(183, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Search Book";
             // 
             // txtBookname
             // 
             this.txtBookname.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold);
-            this.txtBookname.Location = new System.Drawing.Point(405, 66);
+            this.txtBookname.Location = new System.Drawing.Point(540, 81);
+            this.txtBookname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBookname.Name = "txtBookname";
-            this.txtBookname.Size = new System.Drawing.Size(260, 35);
+            this.txtBookname.Size = new System.Drawing.Size(345, 42);
             this.txtBookname.TabIndex = 0;
             this.txtBookname.TextChanged += new System.EventHandler(this.txtBookname_TextChanged);
             // 
@@ -91,10 +94,12 @@
             // 
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 119);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 146);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(864, 206);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1152, 254);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -113,62 +118,69 @@
             this.panel1.Controls.Add(this.txtBname);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btncancle);
-            this.panel1.Location = new System.Drawing.Point(17, 348);
+            this.panel1.Location = new System.Drawing.Point(23, 428);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(864, 187);
+            this.panel1.Size = new System.Drawing.Size(1151, 229);
             this.panel1.TabIndex = 4;
             // 
             // txtqut
             // 
             this.txtqut.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtqut.Location = new System.Drawing.Point(620, 82);
+            this.txtqut.Location = new System.Drawing.Point(827, 101);
+            this.txtqut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtqut.Name = "txtqut";
-            this.txtqut.Size = new System.Drawing.Size(231, 35);
+            this.txtqut.Size = new System.Drawing.Size(307, 42);
             this.txtqut.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(460, 85);
+            this.label5.Location = new System.Drawing.Point(613, 105);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 28);
+            this.label5.Size = new System.Drawing.Size(135, 36);
             this.label5.TabIndex = 12;
             this.label5.Text = "Quantity";
             // 
             // txtpb
             // 
             this.txtpb.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpb.Location = new System.Drawing.Point(620, 38);
+            this.txtpb.Location = new System.Drawing.Point(827, 47);
+            this.txtpb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpb.Name = "txtpb";
-            this.txtpb.Size = new System.Drawing.Size(231, 35);
+            this.txtpb.Size = new System.Drawing.Size(307, 42);
             this.txtpb.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(460, 41);
+            this.label4.Location = new System.Drawing.Point(613, 50);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 28);
+            this.label4.Size = new System.Drawing.Size(142, 36);
             this.label4.TabIndex = 10;
             this.label4.Text = "Publisher";
             // 
             // txtauthour
             // 
             this.txtauthour.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtauthour.Location = new System.Drawing.Point(145, 82);
+            this.txtauthour.Location = new System.Drawing.Point(193, 101);
+            this.txtauthour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtauthour.Name = "txtauthour";
-            this.txtauthour.Size = new System.Drawing.Size(285, 35);
+            this.txtauthour.Size = new System.Drawing.Size(379, 42);
             this.txtauthour.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 85);
+            this.label3.Location = new System.Drawing.Point(35, 105);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 28);
+            this.label3.Size = new System.Drawing.Size(110, 36);
             this.label3.TabIndex = 8;
             this.label3.Text = "Author";
             // 
@@ -178,9 +190,10 @@
             this.btnupdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnupdate.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnupdate.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnupdate.Location = new System.Drawing.Point(25, 135);
+            this.btnupdate.Location = new System.Drawing.Point(33, 166);
+            this.btnupdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(124, 40);
+            this.btnupdate.Size = new System.Drawing.Size(165, 49);
             this.btnupdate.TabIndex = 6;
             this.btnupdate.Text = "UPDATE";
             this.btnupdate.UseVisualStyleBackColor = false;
@@ -192,9 +205,10 @@
             this.btndelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btndelete.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndelete.ForeColor = System.Drawing.Color.DarkRed;
-            this.btndelete.Location = new System.Drawing.Point(348, 135);
+            this.btndelete.Location = new System.Drawing.Point(464, 166);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(115, 40);
+            this.btndelete.Size = new System.Drawing.Size(153, 49);
             this.btndelete.TabIndex = 8;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = false;
@@ -203,18 +217,20 @@
             // txtBname
             // 
             this.txtBname.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBname.Location = new System.Drawing.Point(145, 38);
+            this.txtBname.Location = new System.Drawing.Point(193, 47);
+            this.txtBname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBname.Name = "txtBname";
-            this.txtBname.Size = new System.Drawing.Size(285, 35);
+            this.txtBname.Size = new System.Drawing.Size(379, 42);
             this.txtBname.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 41);
+            this.label2.Location = new System.Drawing.Point(27, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 28);
+            this.label2.Size = new System.Drawing.Size(153, 36);
             this.label2.TabIndex = 4;
             this.label2.Text = "Book Title";
             // 
@@ -224,9 +240,10 @@
             this.btncancle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncancle.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancle.ForeColor = System.Drawing.Color.DarkRed;
-            this.btncancle.Location = new System.Drawing.Point(737, 135);
+            this.btncancle.Location = new System.Drawing.Point(983, 166);
+            this.btncancle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btncancle.Name = "btncancle";
-            this.btncancle.Size = new System.Drawing.Size(114, 40);
+            this.btncancle.Size = new System.Drawing.Size(152, 49);
             this.btncancle.TabIndex = 7;
             this.btncancle.Text = "CANCEL";
             this.btncancle.UseVisualStyleBackColor = false;
@@ -237,8 +254,9 @@
             this.panel22.BackColor = System.Drawing.Color.IndianRed;
             this.panel22.Controls.Add(this.label6);
             this.panel22.Location = new System.Drawing.Point(0, -2);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(899, 65);
+            this.panel22.Size = new System.Drawing.Size(1199, 80);
             this.panel22.TabIndex = 5;
             // 
             // label6
@@ -247,9 +265,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Snap ITC", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label6.Location = new System.Drawing.Point(345, 11);
+            this.label6.Location = new System.Drawing.Point(460, 14);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(211, 37);
+            this.label6.Size = new System.Drawing.Size(264, 48);
             this.label6.TabIndex = 2;
             this.label6.Text = "View Book ";
             // 
@@ -259,9 +278,10 @@
             this.btnexit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnexit.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnexit.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnexit.Location = new System.Drawing.Point(17, 66);
+            this.btnexit.Location = new System.Drawing.Point(23, 81);
+            this.btnexit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(110, 35);
+            this.btnexit.Size = new System.Drawing.Size(147, 43);
             this.btnexit.TabIndex = 9;
             this.btnexit.Text = "EXIT";
             this.btnexit.UseVisualStyleBackColor = false;
@@ -269,11 +289,11 @@
             // 
             // ViewBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(890, 544);
+            this.ClientSize = new System.Drawing.Size(1187, 670);
             this.ControlBox = false;
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.panel22);
@@ -282,6 +302,7 @@
             this.Controls.Add(this.txtBookname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btncl);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Book";

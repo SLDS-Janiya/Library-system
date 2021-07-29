@@ -108,6 +108,7 @@
             this.viewBookToolStripMenuItem.Name = "viewBookToolStripMenuItem";
             this.viewBookToolStripMenuItem.Size = new System.Drawing.Size(236, 40);
             this.viewBookToolStripMenuItem.Text = "View Book";
+            this.viewBookToolStripMenuItem.Click += new System.EventHandler(this.viewBookToolStripMenuItem_Click_1);
             // 
             // memberToolStripMenuItem
             // 
@@ -126,6 +127,7 @@
             this.addMemberT.Name = "addMemberT";
             this.addMemberT.Size = new System.Drawing.Size(278, 40);
             this.addMemberT.Text = "Add Member";
+            this.addMemberT.Click += new System.EventHandler(this.addMemberT_Click);
             // 
             // viewMemberToolStripMenuItem
             // 
@@ -189,7 +191,7 @@
             // 
             this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.Orange;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 40);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(192, 40);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // exitToolStripMenuItem
@@ -197,7 +199,7 @@
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Crimson;
             this.exitToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 40);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(192, 40);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 

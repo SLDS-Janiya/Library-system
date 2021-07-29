@@ -20,7 +20,7 @@ namespace library_Managmet_System
 
         SqlDataAdapter SqlDa = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-0F72558;Initial Catalog=Library_Management;Integrated Security=True");
         int SSerial = 0;
 
         //-------------------------------Button Exit--------------------------------------------//
@@ -56,7 +56,7 @@ namespace library_Managmet_System
         {
             try
             {
-                String checkID = "SELECT StSerial FROM Member_Dtl";
+                String checkID = "SELECT StSerial FROM Members";
                 conn.Open();
                 SqlDa = new SqlDataAdapter(checkID, conn);
                 DataTable Dt = new DataTable();
@@ -64,7 +64,7 @@ namespace library_Managmet_System
                 conn.Close();
                 if (Dt.Rows.Count > 0)
                 {
-                    String getMaxID = "SELECT MAX(StSerial) FROM Member_Dtl";
+                    String getMaxID = "SELECT MAX(StSerial) FROM Members";
                     conn.Open();
                     cmd = new SqlCommand(getMaxID, conn);
                     SqlDataReader R = cmd.ExecuteReader();

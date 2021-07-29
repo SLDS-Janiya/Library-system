@@ -39,9 +39,9 @@ namespace library_Managmet_System
                 try
                 {
 
-                    String saveque = "INSERT INTO Books VALUES('" + txtbname.Text + "','" + txtauthor.Text + "','" + txtpublic.Text + "','" + txtquan.Text + "')";
+                    String saveQurey = "INSERT INTO Books VALUES('" + txtbname.Text + "','" + txtauthor.Text + "','" + txtpublic.Text + "','" + txtquan.Text + "')";
                     conn.Open();
-                    cmd = new SqlCommand(saveque, conn);
+                    cmd = new SqlCommand(saveQurey, conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Details of Book " + txtbname.Text + " ,successfully save to the Database!", "SAVED!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -81,5 +81,10 @@ namespace library_Managmet_System
         {
            
             }
+
+        private void Addbook_Load(object sender, EventArgs e)
+        {
+
         }
+    }
     }

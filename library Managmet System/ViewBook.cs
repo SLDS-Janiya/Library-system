@@ -19,24 +19,22 @@ namespace library_Managmet_System
         }
         SqlDataAdapter SqlDa = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-0F72558;Initial Catalog=Library_Management;Integrated Security=True");
 
         //-------------------------------from load--------------------------------------------//
         private void ViewBook_Load(object sender, EventArgs e)
         {
             if (loginForm.Utype == "User")
             {
-               panel1.Visible = false;
+                panel1.Visible = false;
             }
-            panel1.Visible = false;
 
 
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True";
+           
             SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
+            cmd.Connection = conn;
 
-            cmd.CommandText = "select * from Book_Dtl";
+            cmd.CommandText = "select * from Books";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -59,12 +57,11 @@ namespace library_Managmet_System
         {
             if(txtBookname.Text != "")
             {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True";
+               
                 SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
+                cmd.Connection = conn;
 
-                cmd.CommandText = "select * from Book_Dtl where BName LIKE '"+txtBookname.Text+ "%'";
+                cmd.CommandText = "select * from Books where BName LIKE '"+txtBookname.Text+ "%'";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -73,12 +70,11 @@ namespace library_Managmet_System
             }
             else
             {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True";
+                
                 SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
+                cmd.Connection = conn;
 
-                cmd.CommandText = "select * from Book_Dtl";
+                cmd.CommandText = "select * from Books";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -104,21 +100,19 @@ namespace library_Managmet_System
         {
             try
             {
-                String upque = "UPDATE Book_Dtl SET BName='" + txtBname.Text + "',BAuthor='" + txtauthour.Text + "',BPubl='" + txtpb.Text + "',BQuan='" + txtqut.Text +  "' WHERE Bid='" + rowid + "'";
+                String query = "UPDATE Books SET BName='" + txtBname.Text + "',BAuthor='" + txtauthour.Text + "',BPubl='" + txtpb.Text + "',BQuan='" + txtqut.Text +  "' WHERE Bid='" + rowid + "'";
                 conn.Open();
-                cmd = new SqlCommand(upque, conn);
+                cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Book " + txtBname.Text + "\'s Details successfully UPDATED!", "UPDATED!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 panel1.Visible = false;
                 txtBookname.Focus();
 
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True";
                 SqlCommand cmdd = new SqlCommand();
-                cmdd.Connection = con;
+                cmdd.Connection = conn;
 
-                cmdd.CommandText = "select * from Book_Dtl";
+                cmdd.CommandText = "select * from Books";
                 SqlDataAdapter da = new SqlDataAdapter(cmdd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -140,24 +134,22 @@ namespace library_Managmet_System
         {
             try
             {
-               DialogResult conDel = MessageBox.Show("Are you sure, You want toDelete Book Dtl: " + txtBname.Text+ " from the Database??? ", "Confirm to Delete!",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+               DialogResult conDel = MessageBox.Show("Are you sure, You want toDelete Books: " + txtBname.Text+ " from the Database??? ", "Confirm to Delete!",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (conDel == DialogResult.Yes)
                 {
-                    String Delque = "DELETE FROM Book_Dtl WHERE Bid='" + rowid + "'";
+                    String query = "DELETE FROM Books WHERE Bid='" + rowid + "'";
                     conn.Open();
-                    cmd = new SqlCommand(Delque, conn);
+                    cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("DeleteSuccessfully!", "DELETE!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtBookname.Focus();
                     panel1.Visible = false;
 
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True";
                     SqlCommand cmddd = new SqlCommand();
-                    cmddd.Connection = con;
+                    cmddd.Connection = conn;
 
-                    cmddd.CommandText = "select * from Book_Dtl";
+                    cmddd.CommandText = "select * from Books";
                     SqlDataAdapter da = new SqlDataAdapter(cmddd);
                     DataSet ds = new DataSet();
                     da.Fill(ds);
@@ -203,12 +195,12 @@ namespace library_Managmet_System
             {
                 panel1.Visible = true;
             }
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-P8TJM59;Initial Catalog=library_System;Integrated Security=True";
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Data Source=DESKTOP-0F72558;Initial Catalog=Library_Management;Integrated Security=True";
             SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
+            cmd.Connection = conn;
 
-            cmd.CommandText = "select * from Book_Dtl where Bid= " + bid + "";
+            cmd.CommandText = "select * from Books where Bid= " + bid + "";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);

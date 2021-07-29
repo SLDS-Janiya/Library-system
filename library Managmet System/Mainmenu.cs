@@ -25,13 +25,9 @@ namespace library_Managmet_System
             this.Hide();
         }
 
-        //-------------------------------viewBook--------------------------------------------//
-        private void viewBookToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ViewBook frm = new ViewBook();
-            frm.Show();
-            this.Hide();
-        }
+        
+        
+           
 
         //-------------------------------addMember--------------------------------------------//
         private void addMemberToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,6 +119,21 @@ namespace library_Managmet_System
         private void issueBookToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        //-------------------------------viewBook--------------------------------------------//
+        private void viewBookToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ViewBook frm = new ViewBook();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void addMemberT_Click(object sender, EventArgs e)
+        {
+            AddStudent frm = new AddStudent();
+            frm.Show();
+            this.Hide();
         }
     }
 }
